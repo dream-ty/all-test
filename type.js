@@ -11,6 +11,7 @@ function Person (name, age) {
   this.name = name
   this.age = age
   // return { name: name }
+  
 }
 let name = '111'
 const zhangsan = new Person('zhangsan', 17)
