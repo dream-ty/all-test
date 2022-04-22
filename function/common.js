@@ -1,4 +1,4 @@
-// 数字转换千分位
+// // 数字转换千分位
 export function toThousands(num, pointLength) {
   num = Number(num)
   if (!num) return 0
@@ -11,7 +11,7 @@ export function toThousands(num, pointLength) {
   return pointLength ? startValue + '.' + endValue : noDecimalPointValue
 }
 
-// 千分位转换回数字
+// // 千分位转换回数字
 export function delcommafy(num) {
   num = (num + '').trim()
   if (num === '') {
@@ -20,3 +20,4 @@ export function delcommafy(num) {
   num = num && num.replace(/,/gi, '')
   return Number(num) || 0
 }
+
