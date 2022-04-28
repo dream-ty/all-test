@@ -52,3 +52,30 @@ const chainObj2 =(num) => (function(value){
   return proxyObj
 })(num)
 console.log('chainObj2(3).double.pow.reverseInt.get', chainObj2(3).double.pow.reverseInt.get);
+
+// 引用类库，并使用最小实例
+Function.prototype.method = function(name, fn) {
+  // ...
+};
+(function() {
+  function _$(els) {
+    // ...
+  }
+  _$.method('addEvent', function(type, fn) {
+    // ...
+  })
+  // ...
+    
+  window.installHelper = function(scope, interface) {
+    scope[interface] = function() {
+      return new _$(arguments);
+    }
+  };
+})();
+
+
+/* Usage. */
+
+installHelper(window, '$');
+
+$('example').show();
