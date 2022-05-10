@@ -44,6 +44,7 @@ interface NumberArr {
   [propName: number]: string
 } 
 const acd: NumberArr = [ '12', '22' ]
+// const adcd: NumberArr = [ 1, 2 ]
 // const aaa: NumberArr = { 1: 2 }
 // acd.push('222')
 
