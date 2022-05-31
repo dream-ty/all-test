@@ -27,7 +27,7 @@ console.log(1111, person1);
 person1.sayName()
 person1.sayBirthday()
 person1.sayIsd()
-// person1.sex
+// person1.sexz
 // person1.ids
 class Student extends Person1 {
   age: number
@@ -36,6 +36,7 @@ class Student extends Person1 {
     this.age = age
   }
   sayBirthday() {
+    // 保护类在子类内部可以调用
     console.log(this.birthday + '123');
   }
 }

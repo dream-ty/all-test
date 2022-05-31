@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Eugene
+ * @Date: 2022-04-02 14:11:18
+ * @LastEditors: Andy
+ * @LastEditTime: 2022-05-11 09:47:00
+ */
 let a11 
 a11 = 1
 a11= '1'
@@ -32,3 +40,5 @@ type enumJs = string | number | boolean | undefined | null | object | bigint | s
 type enumEs = Array<number> | Date | Error | RegExp 
 // DOM 和 BOM
 type enumDom = HTMLElement | NodeList | MouseEvent
+
+const aaaa: enumJs = 123
