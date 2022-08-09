@@ -6,9 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./factoryPatterns.js"></script>
+  <style>
+    html,body{
+      padding: 0;
+      margin: 0;
+    }
+    .contentBox{
+      height: 100vh;
+      overflow: hidden;
+    }
+    .content-box{
+      height: 100%;
+      overflow-y: auto;
+
+    }
+    .content-box div{
+      padding: 30px;
+    }
+    .btn-class{
+      position: fixed;
+      bottom: 0;
+      width: 100vw;
+      text-align: center;
+    }
+
+  </style>
 </head>
 <body>
-  <div>测试页</div>
+  <div class="contentBox" inert>
+    <div>测试页</div>
+    <input type="text" placeholder="can't edit">
+    <div class="content-box">
+      <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div> <div>content-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxcontent-boxafffsafsaf發個給娃</div>
+    </div>
+    <button class="btn-class">底部按鈕</button>
+  </div>
   
 </body>
 </html>

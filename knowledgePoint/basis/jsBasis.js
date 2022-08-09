@@ -302,3 +302,75 @@ Object.prototype.toString.call( /regex-literal/i );
 // （5）第五种模式是动态原型模式，这一种模式将原型方法赋值的创建过程移动到了构造函数的内部，通过对属性是否存在的判断，可以实现仅在第一次调用函数时对原型对象赋值一次的效果。这一种方式很好地对上面的混合模式进行了封装。
 // （6）第六种模式是寄生构造函数模式，这一种模式和工厂模式的实现基本相同，我对这个模式的理解是，它主要是基于一个已有的类型，在实例化时对实例化的对象进行扩展。这样既不用修改原来的构造函数，也达到了扩展对象的目的。它的一个缺点和工厂模式一样，无法实现对象的识别。
 
+// 变量提升
+var name = 'World!';
+(function () {
+    if (typeof name === 'undefined') {
+      var name = 'Jack';
+      console.log('Goodbye ' + name);
+    } else {
+      console.log('Hello ' + name);
+    }
+})();
+
+// 全局变量提升
+(function() {
+  var x = y = 1;
+})();
+console.log(y);
+// 报错x未定义
+// console.log(x);
+
+// 输出Goodbye Jack
+
+// 最大值问题，超出最大值
+var END = Math.pow(2, 53);
+var START = END - 100;
+var count = 0;
+// for (var i = START; i <= END; i++) { 
+//   count++;
+// }
+// console.log(count);
+// 输出 true Math.pow(2, 53)
+console.log('END', END + 1 == END, END + 1);
+
+// 过滤器不会处理未被定义的元素
+var ary = [0,1,2];
+ary[10] = 10;
+let ary123 = ary.filter(function(x) {
+  // console.log('x', x);
+  return x === undefined;
+});
+ary.forEach(item => {
+  // console.log('item', item);
+})
+let maparr = ary.map(item => {
+  console.log('map', item);
+  return item === 0
+})
+for(item of ary){
+  // console.log('item1', item);
+}
+for(let i =0; i<ary.length; i++ ) {
+  // console.log('item2', ary[i]);
+
+}
+console.log(ary, ary123, maparr);
+
+// 双精度问题
+var two = 0.2;
+var one = 0.1;
+var eight = 0.8;
+var six = 0.6;
+[two - one == one, eight - six == two]
+console.log('two - one, eight - six', two - one, eight - six, eight-0.1);
+
+// 正则表达式实例   每个正则表达式都是一个实例
+var a = /123/;
+var b = /123/;
+a == b;
+a === b;
+
+// 最后一个逗号不计入数组 
+[,,,].join(", ")
+// ", , "
