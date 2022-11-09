@@ -374,3 +374,21 @@ a === b;
 // 最后一个逗号不计入数组 
 [,,,].join(", ")
 // ", , "
+
+// 隐式转换
+// 对象非对象比较会转换该对象再进行比较，优先调toString()方法，其次valueOf方法, 最后是Object的toString()方法
+const x1 = {
+  val: 0,
+  valueOf: () => {
+    x1.val ++ 
+    return x1.val
+  }
+}
+const x2 = {
+  val: 0,
+  toString: () => {
+    x2.val ++ 
+    return x2.val
+  }
+}
+// x1 == 1 && x1 == 2 && x1 ==3
