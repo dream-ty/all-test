@@ -34,4 +34,3 @@ const vnode = {
 }
 
 renderer(vnode, document.body)
-//
