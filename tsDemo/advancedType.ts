@@ -53,3 +53,16 @@ const person222: Person222 = {
   name: '1'
 }
 
+// any类型转换，不污染
+function testAny(val: any) {
+  return val
+}
+testAny(1)
+function testAny1<T extends any>(val: T){
+  return val
+}
+testAny1(1)
+testAny1('1')
+console.log('typeof(testAny1(', typeof(testAny1('1')), typeof(testAny1({a: `1`})));
+
+
